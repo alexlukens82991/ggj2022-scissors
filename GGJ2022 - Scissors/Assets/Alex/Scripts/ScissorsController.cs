@@ -6,7 +6,9 @@ public class ScissorsController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float mvmtSpeed;
+    [SerializeField] private float maxSpeed;
     [SerializeField] private float turnSpeed;
+    [SerializeField] private float animationSpeed;
 
     [Header("Cache")]
     [SerializeField] private Animator animator;
@@ -20,6 +22,8 @@ public class ScissorsController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float turnSpeed = (Mathf.Abs(rb.velocity.z) + Mathf.Abs(rb.velocity.x)) / animationSpeed;
+
         if (Input.GetKey("w"))
         {
             RollForward();
@@ -28,6 +32,7 @@ public class ScissorsController : MonoBehaviour
         else if (Input.GetKey("s"))
         {
             RollReverse();
+            turnSpeed *= -1;
         }
 
         if (Input.GetKey("a"))
@@ -39,7 +44,9 @@ public class ScissorsController : MonoBehaviour
             TurnRight();
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.z / 10));
+
+
+        animator.SetFloat("Speed", turnSpeed);
     }
 
     IEnumerator SpeedCheck()
@@ -53,7 +60,7 @@ public class ScissorsController : MonoBehaviour
 
     private void RollForward()
     {
-        if (rb.velocity.z < 30)
+        if (rb.velocity.z < maxSpeed)
         {
 
             rb.AddRelativeForce(Vector3.forward * mvmtSpeed, ForceMode.Impulse);
@@ -64,7 +71,7 @@ public class ScissorsController : MonoBehaviour
 
     private void RollReverse()
     {
-        if (rb.velocity.z < 30)
+        if (rb.velocity.z < maxSpeed)
         {
 
             rb.AddRelativeForce(-Vector3.forward * mvmtSpeed, ForceMode.Impulse);

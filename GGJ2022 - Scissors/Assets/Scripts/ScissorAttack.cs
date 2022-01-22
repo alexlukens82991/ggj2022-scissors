@@ -7,6 +7,7 @@ public class ScissorAttack : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float power;
     [SerializeField] private float yPower;
+    [SerializeField] private LayerMask ignoreLayer;
 
     [Header("Cache")]
     [SerializeField] private Camera playerCam;
@@ -28,14 +29,18 @@ public class ScissorAttack : MonoBehaviour
 
     private void Attack()
     {
-        Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
+        //if (rb.velocity.z < scissorsController.GetMaxSpeed())
+        //{
+            Ray ray = playerCam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            Vector3 dir = transform.position - hit.point;
-            dir.Normalize();
-            rb.AddRelativeForce((dir + (Vector3.up * yPower)) * power, ForceMode.Impulse);
+            if (Physics.Raycast(ray, out RaycastHit hit, 100, ~ignoreLayer))
+            {
+                Vector3 dir = hit.point - transform.position;
+                dir.Normalize();
+                rb.AddRelativeForce((dir + (Vector3.up * yPower)) * power, ForceMode.Impulse);
 
-        }
+            }
+        //}
+        
     }
 }

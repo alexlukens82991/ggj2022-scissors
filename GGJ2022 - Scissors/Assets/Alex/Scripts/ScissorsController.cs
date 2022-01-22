@@ -97,4 +97,5 @@ public class ScissorsController : MonoBehaviour
     }
 
     public Rigidbody GetRb() { return rb; }
+    public float GetMaxSpeed() { return maxSpeed; }
 }

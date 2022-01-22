@@ -166,6 +166,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827476302517727439, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335170898575471365, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012896115410949, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9182012896115410951, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: lookPoint
       value: 
@@ -173,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_Name
       value: Balloon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9182012897612594671, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_RootOrder
@@ -592,6 +608,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827476302517727439, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335170898575471365, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012896115410949, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9182012896115410951, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: lookPoint
       value: 
@@ -599,6 +627,10 @@ PrefabInstance:
     - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_Name
       value: Balloon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9182012897612594671, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_RootOrder
@@ -1767,8 +1799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab578326863fc7c41b4875aff4af6b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
-  yPower: 1
+  power: 20
+  yPower: 0.5
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerCam: {fileID: 1687258584}
   scissorsController: {fileID: 1465291724}
 --- !u!1 &1470004715
 GameObject:
@@ -2567,6 +2603,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827476302517727439, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335170898575471365, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012896115410949, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9182012896115410951, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: lookPoint
       value: 
@@ -2574,6 +2622,10 @@ PrefabInstance:
     - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_Name
       value: Balloon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9182012897612594671, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_RootOrder
@@ -2909,6 +2961,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827476302517727439, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335170898575471365, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012896115410949, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9182012896115410951, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: lookPoint
       value: 
@@ -2916,6 +2980,10 @@ PrefabInstance:
     - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_Name
       value: Balloon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9182012897612594671, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_RootOrder
@@ -3119,6 +3187,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2827476302517727439, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335170898575471365, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012896115410949, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9182012896115410951, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: lookPoint
       value: 
@@ -3126,6 +3206,10 @@ PrefabInstance:
     - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_Name
       value: Balloon (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182012897612594667, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9182012897612594671, guid: 2dfdfb50eb314ab4eb32488df79c81fd, type: 3}
       propertyPath: m_RootOrder

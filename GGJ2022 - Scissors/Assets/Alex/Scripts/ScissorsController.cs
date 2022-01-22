@@ -9,6 +9,7 @@ public class ScissorsController : MonoBehaviour
     [SerializeField] private float turnSpeed;
 
     [Header("Cache")]
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private WheelCollider wheel;
 
@@ -24,6 +25,11 @@ public class ScissorsController : MonoBehaviour
             RollForward();
         }
 
+        else if (Input.GetKey("s"))
+        {
+            RollReverse();
+        }
+
         if (Input.GetKey("a"))
         {
             TurnLeft();
@@ -33,6 +39,7 @@ public class ScissorsController : MonoBehaviour
             TurnRight();
         }
 
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.z / 10));
     }
 
     IEnumerator SpeedCheck()
@@ -49,9 +56,20 @@ public class ScissorsController : MonoBehaviour
         if (rb.velocity.z < 30)
         {
 
-            rb.AddForce(Vector3.forward * mvmtSpeed, ForceMode.Impulse);
+            rb.AddRelativeForce(Vector3.forward * mvmtSpeed, ForceMode.Impulse);
 
             wheel.motorTorque = 1;
+        }
+    }
+
+    private void RollReverse()
+    {
+        if (rb.velocity.z < 30)
+        {
+
+            rb.AddRelativeForce(-Vector3.forward * mvmtSpeed, ForceMode.Impulse);
+
+            wheel.motorTorque = -1;
         }
     }
 

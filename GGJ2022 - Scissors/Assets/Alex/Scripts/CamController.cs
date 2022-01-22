@@ -6,18 +6,25 @@ using UnityEngine;
 public class CamController : MonoBehaviour
 {
     [Header("Cache")]
-    [SerializeField] private Transform lookObj;
-    [SerializeField] private CinemachineComposer cam;
+    [SerializeField] private Animator animator;
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKey("a"))
         {
-            if (cam.m_TrackedObjectOffset != Vector3.left)
-            {
-                //cam.m_TrackedObjectOffset == Vector3.left;
-            }
+            animator.SetInteger("Dir", -1);
+        }
+        else if (Input.GetKey("d"))
+        {
+            animator.SetInteger("Dir", 1);
+        }
+        else
+        {
+            animator.SetInteger("Dir", 0);
         }
     }
+
+
+    
 }

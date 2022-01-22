@@ -95,4 +95,6 @@ public class ScissorsController : MonoBehaviour
         Vector3 rot = new Vector3(rb.rotation.eulerAngles.x, rb.rotation.eulerAngles.y, 0);
         rb.rotation = Quaternion.Euler(rot);
     }
+
+    public Rigidbody GetRb() { return rb; }
 }
